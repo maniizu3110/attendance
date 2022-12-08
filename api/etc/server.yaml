@@ -1,0 +1,18 @@
+Name: server
+Host: 0.0.0.0
+Port: 8080
+Prediction:
+  Etcd:
+    Hosts:
+      - etcd:2379
+    Key: prediction.rpc
+Project:
+  Etcd:
+    Hosts:
+      - etcd:2379
+    Key: project.rpc
+Attendance:
+  Etcd:
+    Hosts:
+      - etcd:2379
+    Key: attendance.rpc

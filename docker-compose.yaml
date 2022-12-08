@@ -1,0 +1,36 @@
+version: "3"
+
+services:
+  etcd:
+    image: "bitnami/etcd:latest"
+    environment:
+      - ALLOW_NONE_AUTHENTICATION=yes
+      - ETCD_ADVERTISE_CLIENT_URLS=http://etcd:2379
+    ports:
+      - 23790:2379
+      - 23800:2380
+
+  gateway:
+    build:
+      context: gateway
+    restart: always
+    ports:
+      - 8080:8080
+  # attendance_rpc:
+  #   build:
+  #     context: rpc/attendance
+  #   restart: always
+  #   ports:
+  #     - 8081:8081
+  # prediction_rpc:
+  #   build:
+  #     context: rpc/prediction
+  #   restart: always
+  #   ports:
+  #     - 8082:8082
+  project_rpc:
+    build:
+      context: rpc/project
+    restart: always
+    ports:
+      - 8083:8083

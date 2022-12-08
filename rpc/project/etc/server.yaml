@@ -1,0 +1,6 @@
+Name: project.rpc
+ListenOn: 0.0.0.0:8083
+Etcd:
+  Hosts:
+    - etcd:2379
+  Key: project.rpc
