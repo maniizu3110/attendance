@@ -1,5 +1,5 @@
 run:
-	go run server.go -f etc/server.yaml
+	go run project.go -f etc/project.yaml
 
 rpc:
-	goctl rpc protoc server.proto --go_out=. --go-grpc_out=. --zrpc_out=. --style=go_zero
+	goctl rpc protoc project.proto --go_out=. --go-grpc_out=. --zrpc_out=. --style=go_zero

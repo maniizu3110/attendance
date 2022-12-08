@@ -7,5 +7,5 @@ import (
 
 type Config struct {
 	rest.RestConf
-	Add zrpc.RpcClientConf
+	Project zrpc.RpcClientConf
 }

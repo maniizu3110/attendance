@@ -12,6 +12,6 @@ message addResp {
     bool ok = 1;
 }
 
-service adder {
-    rpc add(addReq) returns(addResp);
+service project {
+    rpc add(addReq) returns (addResp);
 }

@@ -5,6 +5,7 @@ import (
 
 	"github.com/maniizu3110/attendance/rpc/prediction/internal/svc"
 	"github.com/maniizu3110/attendance/rpc/prediction/proto/add"
+
 	"github.com/zeromicro/go-zero/core/logx"
 )
 

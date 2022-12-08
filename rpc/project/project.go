@@ -4,10 +4,10 @@ import (
 	"flag"
 	"fmt"
 
-	"github.com/maniizu3110/attendance/rpc/attendance/internal/config"
-	"github.com/maniizu3110/attendance/rpc/attendance/internal/server"
-	"github.com/maniizu3110/attendance/rpc/attendance/internal/svc"
-	"github.com/maniizu3110/attendance/rpc/attendance/proto/add"
+	"github.com/maniizu3110/attendance/project/internal/config"
+	"github.com/maniizu3110/attendance/project/internal/server"
+	"github.com/maniizu3110/attendance/project/internal/svc"
+	"github.com/maniizu3110/attendance/project/proto/add"
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/service"
 	"github.com/zeromicro/go-zero/zrpc"
@@ -25,7 +25,7 @@ func main() {
 	ctx := svc.NewServiceContext(c)
 
 	s := zrpc.MustNewServer(c.RpcServerConf, func(grpcServer *grpc.Server) {
-		add.RegisterAdderServer(grpcServer, server.NewAdderServer(ctx))
+		add.RegisterProjectServer(grpcServer, server.NewProjectServer(ctx))
 
 		if c.Mode == service.DevMode || c.Mode == service.TestMode {
 			reflection.Register(grpcServer)

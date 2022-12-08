@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "proto/add";
+option go_package = "proto/attendance";
 package add;
 
 message addReq {
@@ -12,6 +12,6 @@ message addResp {
     bool ok = 1;
 }
 
-service adder {
+service attendance {
     rpc add(addReq) returns(addResp);
 }

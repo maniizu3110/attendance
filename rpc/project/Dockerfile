@@ -28,4 +28,4 @@ COPY --from=builder /app/etc /app/etc
 
 EXPOSE 8083
 
-CMD ["./project", "-f", "etc/server.yaml"]
+CMD ["./project", "-f", "etc/project.yaml"]

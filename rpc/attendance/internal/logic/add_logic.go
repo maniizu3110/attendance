@@ -4,7 +4,8 @@ import (
 	"context"
 
 	"github.com/maniizu3110/attendance/rpc/attendance/internal/svc"
-	"github.com/maniizu3110/attendance/rpc/attendance/proto/add"
+	"github.com/maniizu3110/attendance/rpc/attendance/proto/attendance"
+
 	"github.com/zeromicro/go-zero/core/logx"
 )
 
@@ -22,8 +23,8 @@ func NewAddLogic(ctx context.Context, svcCtx *svc.ServiceContext) *AddLogic {
 	}
 }
 
-func (l *AddLogic) Add(in *add.AddReq) (*add.AddResp, error) {
+func (l *AddLogic) Add(in *attendance.AddReq) (*attendance.AddResp, error) {
 	// todo: add your logic here and delete this line
 
-	return &add.AddResp{}, nil
+	return &attendance.AddResp{}, nil
 }

@@ -12,6 +12,6 @@ message addResp {
     bool ok = 1;
 }
 
-service adder {
+service prediction {
     rpc add(addReq) returns(addResp);
 }

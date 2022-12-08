@@ -4,10 +4,11 @@ import (
 	"flag"
 	"fmt"
 
-	"github.com/maniizu3110/attendance/rpc/project/internal/config"
-	"github.com/maniizu3110/attendance/rpc/project/internal/server"
-	"github.com/maniizu3110/attendance/rpc/project/internal/svc"
-	"github.com/maniizu3110/attendance/rpc/project/proto/add"
+	"github.com/maniizu3110/attendance/rpc/attendance/internal/config"
+	"github.com/maniizu3110/attendance/rpc/attendance/internal/server"
+	"github.com/maniizu3110/attendance/rpc/attendance/internal/svc"
+	"github.com/maniizu3110/attendance/rpc/attendance/proto/attendance"
+
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/service"
 	"github.com/zeromicro/go-zero/zrpc"
@@ -15,7 +16,7 @@ import (
 	"google.golang.org/grpc/reflection"
 )
 
-var configFile = flag.String("f", "etc/server.yaml", "the config file")
+var configFile = flag.String("f", "etc/attendance.yaml", "the config file")
 
 func main() {
 	flag.Parse()
@@ -25,7 +26,7 @@ func main() {
 	ctx := svc.NewServiceContext(c)
 
 	s := zrpc.MustNewServer(c.RpcServerConf, func(grpcServer *grpc.Server) {
-		add.RegisterAdderServer(grpcServer, server.NewAdderServer(ctx))
+		attendance.RegisterAttendanceServer(grpcServer, server.NewAttendanceServer(ctx))
 
 		if c.Mode == service.DevMode || c.Mode == service.TestMode {
 			reflection.Register(grpcServer)

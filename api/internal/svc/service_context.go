@@ -2,16 +2,18 @@ package svc
 
 import (
 	"github.com/maniizu3110/attendance/api/internal/config"
-	"github.com/maniizu3110/attendance/rpc/project/adder"
+	"github.com/maniizu3110/attendance/rpc/project/project"
+	"github.com/zeromicro/go-zero/zrpc"
 )
 
 type ServiceContext struct {
-	Config config.Config
-	Adder  adder.Adder // manual code
+	Config  config.Config
+	Project project.Project
 }
 
 func NewServiceContext(c config.Config) *ServiceContext {
 	return &ServiceContext{
-		Config: c,
+		Config:  c,
+		Project: project.NewProject(zrpc.MustNewClient(c.Project)),
 	}
 }
