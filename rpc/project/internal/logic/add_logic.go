@@ -2,6 +2,7 @@ package logic
 
 import (
 	"context"
+	"fmt"
 
 	"github.com/maniizu3110/attendance/rpc/project/internal/svc"
 	"github.com/maniizu3110/attendance/rpc/project/proto/add"
@@ -24,7 +25,7 @@ func NewAddLogic(ctx context.Context, svcCtx *svc.ServiceContext) *AddLogic {
 }
 
 func (l *AddLogic) Add(in *add.AddReq) (*add.AddResp, error) {
-	// todo: add your logic here and delete this line
-
+	fmt.Println("Add called")
+	fmt.Println(in)
 	return &add.AddResp{}, nil
 }
