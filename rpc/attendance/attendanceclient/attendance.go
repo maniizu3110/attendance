@@ -6,7 +6,10 @@ package attendanceclient
 import (
 	"context"
 
+	"github.com/maniizu3110/attendance/rpc/attendance/proto/attendance"
 
+	"github.com/zeromicro/go-zero/zrpc"
+	"google.golang.org/grpc"
 )
 
 type (
