@@ -3,7 +3,7 @@ package svc
 import (
 	"github.com/maniizu3110/attendance/api/internal/config"
 	// "github.com/maniizu3110/attendance/rpc/project/project"
-	"github.com/zeromicro/go-zero/zrpc"
+	// "github.com/zeromicro/go-zero/zrpc"
 )
 
 type ServiceContext struct {
