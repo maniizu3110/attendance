@@ -2,7 +2,7 @@ package svc
 
 import (
 	"github.com/maniizu3110/attendance/api/internal/config"
-	"github.com/maniizu3110/attendancse/rpc/project/project"
+	"github.com/maniizu3110/attendance/rpc/project/project"
 	"github.com/zeromicro/go-zero/zrpc"
 )
 
