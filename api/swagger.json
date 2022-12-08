@@ -1,0 +1,151 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "",
+    "version": ""
+  },
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/add": {
+      "get": {
+        "operationId": "AddHandler",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/addResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "book",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "price",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "server"
+        ]
+      }
+    },
+    "/check": {
+      "get": {
+        "operationId": "CheckHandler",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/checkResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "book",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "server"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "addReq": {
+      "type": "object",
+      "properties": {
+        "book": {
+          "type": "string"
+        },
+        "price": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "addReq",
+      "required": [
+        "book",
+        "price"
+      ]
+    },
+    "addResp": {
+      "type": "object",
+      "properties": {
+        "ok": {
+          "type": "boolean",
+          "format": "boolean"
+        }
+      },
+      "title": "addResp",
+      "required": [
+        "ok"
+      ]
+    },
+    "checkReq": {
+      "type": "object",
+      "properties": {
+        "book": {
+          "type": "string"
+        }
+      },
+      "title": "checkReq",
+      "required": [
+        "book"
+      ]
+    },
+    "checkResp": {
+      "type": "object",
+      "properties": {
+        "found": {
+          "type": "boolean",
+          "format": "boolean"
+        },
+        "price": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "checkResp",
+      "required": [
+        "found",
+        "price"
+      ]
+    }
+  },
+  "securityDefinitions": {
+    "apiKey": {
+      "type": "apiKey",
+      "description": "Enter JWT Bearer token **_only_**",
+      "name": "Authorization",
+      "in": "header"
+    }
+  },
+  "security": [
+    {
+      "apiKey": []
+    }
+  ]
+}
