@@ -320,6 +320,10 @@ github.com/mailru/easyjson v0.0.0-20190614124828-94de47d64c63/go.mod h1:C1wdFJiN
 github.com/mailru/easyjson v0.0.0-20190626092158-b2ccc519800e/go.mod h1:C1wdFJiN94OJF2b5HbByQZoLdCWB1Yqtg26g4irojpc=
 github.com/mailru/easyjson v0.7.7 h1:UGYAvKxe3sBsEDzO8ZeWOSlIQfWFlxbzLZe7hwFURr0=
 github.com/mailru/easyjson v0.7.7/go.mod h1:xzfreul335JAWq5oZzymOObrkdz5UnU4kGfJJLY9Nlc=
+github.com/maniizu3110/attendance/rpc/attendance v0.0.0-20221208161238-3ebe5f083892 h1:s92nyQsG3t/Pr9/f2DuFKYV5VVq1NDmmbOdc5UaPFUY=
+github.com/maniizu3110/attendance/rpc/attendance v0.0.0-20221208161238-3ebe5f083892/go.mod h1:TG3HBRfp79pksJEPRoqsB8t5eUl/wfsHkYhA7SfzPxA=
+github.com/maniizu3110/attendance/rpc/prediction v0.0.0-20221208161238-3ebe5f083892 h1:fBv7AOZpKuhM4yhXmzE/DLo9oRGy5+msfpXqct/Jg7o=
+github.com/maniizu3110/attendance/rpc/prediction v0.0.0-20221208161238-3ebe5f083892/go.mod h1:ADoiCKyI9UQhMfb+uzMRSnohNxu8KHnLnWoURb6lTbo=
 github.com/maniizu3110/attendance/rpc/project v0.0.0-20221208155527-eef72cbf8c13 h1:uBVjy7+CFxPbSEc7ShZpku/ggywWNIYvp3cVK8ztT2c=
 github.com/maniizu3110/attendance/rpc/project v0.0.0-20221208155527-eef72cbf8c13/go.mod h1:mGmmihZMH6+w4dT08gDVvcezwxGOEozgqMe19A6rihQ=
 github.com/mattn/go-colorable v0.1.9/go.mod h1:u6P/XSegPjTcexA+o6vUJrdnUu04hMope9wVRipJSqc=

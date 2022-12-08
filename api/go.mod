@@ -35,6 +35,8 @@ require (
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect
+	github.com/maniizu3110/attendance/rpc/attendance v0.0.0-20221208161238-3ebe5f083892 // indirect
+	github.com/maniizu3110/attendance/rpc/prediction v0.0.0-20221208161238-3ebe5f083892 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.16 // indirect
 	github.com/matttproud/golang_protobuf_extensions v1.0.4 // indirect
